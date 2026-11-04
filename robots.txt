@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://karemdh128.github.io/kerim-dulli-website/sitemap.xml
