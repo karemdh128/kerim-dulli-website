@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -29,6 +29,805 @@
    "@type":"PostalAddress",
    "addressLocality":"Rize",
    "addressRegion":"Rize",
+   "addressCountry":"TR"
+ },
+ "areaServed":[
+   {"@type":"City","name":"Rize"},
+   {"@type":"City","name":"Trabzon"}
+ ],
+ "availableLanguage":["Arabic","Turkish","English"],
+ "serviceType":[
+   "Arabic Turkish sworn translation",
+   "Notary translation",
+   "Court translation",
+   "Title deed translation",
+   "Residence application assistance",
+   "Real estate services",
+   "Tourism assistance"
+ ]
+}
+</script>
+
+<style>
+:root{
+ --navy:#10243a;
+ --navy2:#1b4058;
+ --gold:#c6a56a;
+ --cream:#f7f5f0;
+ --ink:#263442;
+ --muted:#687786;
+ --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;
+ font-family:Tahoma,Arial,sans-serif;
+ background:var(--cream);
+ color:var(--ink);
+ line-height:1.8;
+}
+a{color:inherit}
+header{
+ background:linear-gradient(135deg,#0c1c2d,#183852);
+ color:white;
+ padding:15px 5%;
+ position:sticky;
+ top:0;
+ z-index:100;
+ box-shadow:0 4px 18px #07132122;
+}
+nav{
+ max-width:1200px;
+ margin:auto;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:15px;
+ flex-wrap:wrap;
+}
+.brand{
+ font-family:Georgia,serif;
+ font-size:25px;
+ letter-spacing:1px;
+ color:#f2d8a5;
+ font-weight:bold;
+}
+.brand small{
+ display:block;
+ font: bold 11px Tahoma,Arial,sans-serif;
+ color:#e8e1d5;
+ letter-spacing:.5px;
+}
+.navlinks{
+ display:flex;
+ gap:15px;
+ flex-wrap:wrap;
+ align-items:center;
+}
+.navlinks a{
+ color:#f4ead8;
+ text-decoration:none;
+ font-size:13px;
+}
+.navlinks a:hover{color:var(--gold)}
+.lang{
+ display:flex;
+ gap:7px;
+ flex-wrap:wrap;
+}
+.lang button{
+ border:1px solid #bda16d;
+ background:transparent;
+ color:white;
+ padding:7px 13px;
+ border-radius:22px;
+ cursor:pointer;
+ font:inherit;
+ font-size:13px;
+}
+.lang button.active,
+.lang button:hover{
+ background:var(--gold);
+ color:#10243a;
+}
+.hero{
+ position:relative;
+ overflow:hidden;
+ padding:90px 6%;
+ color:white;
+ text-align:center;
+ background:
+ linear-gradient(90deg,rgba(8,24,38,.88),rgba(11,37,52,.58)),
+ url('https://commons.wikimedia.org/wiki/Special:FilePath/Panorama%20of%20Rize.jpg?width=1800')
+ center/cover no-repeat;
+}
+.hero-inner{max-width:900px;margin:auto}
+.kicker{color:#e3c58f;font-size:15px}
+.hero h1{
+ font-size:clamp(30px,5vw,48px);
+ margin:12px 0;
+}
+.hero p{
+ max-width:780px;
+ margin:0 auto 25px;
+ color:#e1e8ed;
+ font-size:18px;
+}
+.btn{
+ display:inline-block;
+ background:var(--gold);
+ color:#172b3d;
+ text-decoration:none;
+ padding:11px 23px;
+ border-radius:5px;
+ font-weight:bold;
+ margin:5px;
+ border:1px solid var(--gold);
+}
+.btn.outline{
+ background:transparent;
+ color:#f2d8a5;
+}
+.btn:hover{filter:brightness(1.08)}
+section{
+ padding:58px 6%;
+ max-width:1200px;
+ margin:auto;
+}
+.section-title{
+ text-align:center;
+ color:var(--navy);
+ font-size:29px;
+ margin:0 0 8px;
+}
+.sub{
+ text-align:center;
+ color:var(--muted);
+ margin:0 auto 30px;
+ max-width:800px;
+}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+ gap:18px;
+}
+.card{
+ background:white;
+ padding:23px;
+ border:1px solid #e8e2d7;
+ border-radius:10px;
+ box-shadow:0 8px 24px #10243a0b;
+}
+.card h3{
+ color:var(--navy);
+ margin:5px 0 8px;
+ font-size:19px;
+}
+.card p{margin:0;color:#536170}
+.icon{font-size:27px;color:var(--gold)}
+.gallery{max-width:1200px;margin:auto;padding:55px 6%}
+.gallery-grid{
+ display:grid;
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:18px;
+}
+.gallery-card{
+ position:relative;
+ overflow:hidden;
+ border-radius:12px;
+ background:var(--navy);
+ min-height:240px;
+ box-shadow:0 12px 28px #10243a20;
+}
+.gallery-card img{
+ width:100%;
+ height:260px;
+ display:block;
+ object-fit:cover;
+ transition:transform .4s;
+}
+.gallery-card:hover img{transform:scale(1.05)}
+.caption{
+ position:absolute;
+ inset:auto 0 0;
+ padding:38px 18px 15px;
+ color:white;
+ background:linear-gradient(transparent,rgba(5,18,29,.9));
+}
+.caption h3{margin:0;font-size:19px}
+.caption p{margin:3px 0 0;font-size:13px;color:#e5edf2}
+.about{background:white;max-width:none}
+.about-inner{max-width:1200px;margin:auto}
+.contact{
+ background:var(--navy);
+ color:white;
+ max-width:none;
+}
+.contact .section-title{color:white}
+.contact .sub{color:#d5dfe6}
+.contact-box{max-width:850px;margin:auto;text-align:center}
+.contact-list{
+ display:flex;
+ justify-content:center;
+ gap:12px 24px;
+ flex-wrap:wrap;
+ margin:22px 0;
+}
+.contact-list a{
+ color:#f2d8a5;
+ text-decoration:none;
+}
+.social{margin-top:15px;color:#d5dfe6}
+.social a{color:#f2d8a5;text-decoration:none}
+footer{
+ text-align:center;
+ padding:20px;
+ background:#0b1927;
+ color:#c8d2da;
+ font-size:13px;
+}
+[dir="ltr"] body{text-align:left}
+[dir="ltr"] .card{text-align:left}
+[dir="rtl"] body{text-align:right}
+@media(max-width:760px){
+ header{padding:13px 4%}
+ nav{justify-content:center}
+ .brand{text-align:center;width:100%}
+ .navlinks{justify-content:center}
+ .lang{justify-content:center}
+ .hero{padding:60px 5%}
+ .hero p{font-size:16px}
+ section{padding:42px 5%}
+ .section-title{font-size:25px}
+ .gallery-grid{grid-template-columns:1fr}
+ .gallery-card img{height:230px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+ <div class="brand">
+  KERİM DULLİ
+  <small data-i18n="brandSubtitle">ARAPÇA YEMİNLİ TERCÜMAN</small>
+ </div>
+
+ <div class="navlinks">
+  <a href="#services" data-i18n="navServices">الخدمات</a>
+  <a href="#places" data-i18n="navPlaces">اكتشف المنطقة</a>
+  <a href="#about" data-i18n="navAbout">من نحن</a>
+  <a href="#contact" data-i18n="navContact">تواصل</a>
+ </div>
+
+ <div class="lang">
+  <button type="button" data-lang="ar" class="active">العربية</button>
+  <button type="button" data-lang="tr">Türkçe</button>
+  <button type="button" data-lang="en">English</button>
+ </div>
+</nav>
+</header>
+
+<main>
+
+<div class="hero">
+ <div class="hero-inner">
+  <div class="kicker" data-i18n="kicker">
+   خدمات الترجمة والمعاملات في ريزا – تركيا
+  </div>
+  <h1 data-i18n="heroTitle">المترجم المحلف كيريم دولّي</h1>
+  <p data-i18n="heroText">
+   ترجمة عربية–تركية دقيقة وموثوقة، ومتابعة معاملاتكم الرسمية،
+   وخدمات الإقامة والعقارات والسياحة في ريزا وطرابزون.
+  </p>
+  <a class="btn" href="https://wa.me/905312661988" data-i18n="whatsappCta">
+   تواصل عبر واتساب
+  </a>
+  <a class="btn outline" href="#services" data-i18n="servicesCta">
+   اكتشف خدماتنا
+  </a>
+ </div>
+</div>
+
+<section class="gallery" id="places">
+ <h2 class="section-title" data-i18n="placesTitle">
+  اكتشف جمال ريزا والبحر الأسود
+ </h2>
+ <p class="sub" data-i18n="placesIntro">
+  من مزارع الشاي الخضراء إلى المرتفعات والأنهار؛ تعرّف على أبرز الوجهات السياحية في المنطقة.
+ </p>
+
+ <div class="gallery-grid">
+
+  <article class="gallery-card">
+   <img
+    src="https://commons.wikimedia.org/wiki/Special:FilePath/Panorama%20of%20Rize.jpg?width=1200"
+    alt="مدينة ريزا ومزارع الشاي"
+    data-i18n-alt="place1Alt"
+    loading="lazy">
+   <div class="caption">
+    <h3 data-i18n="place1Title">مدينة ريزا ومزارع الشاي</h3>
+    <p data-i18n="place1Text">إطلالات خضراء على سفوح البحر الأسود.</p>
+   </div>
+  </article>
+
+  <article class="gallery-card">
+   <img
+    src="https://commons.wikimedia.org/wiki/Special:FilePath/Ayder%20Plateau%20%40%20Rize-Turkey.JPG?width=1000"
+    alt="مرتفعات آيدر"
+    data-i18n-alt="place2Alt"
+    loading="lazy">
+   <div class="caption">
+    <h3 data-i18n="place2Title">مرتفعات آيدر – Ayder</h3>
+    <p data-i18n="place2Text">طبيعة جبلية وهواء منعش وأكواخ ريفية.</p>
+   </div>
+  </article>
+
+  <article class="gallery-card">
+   <img
+    src="https://commons.wikimedia.org/wiki/Special:FilePath/F%C4%B1rt%C4%B1na%20Deresi%40Rize-Turkey.JPG?width=1000"
+    alt="وادي فرتينا"
+    data-i18n-alt="place3Alt"
+    loading="lazy">
+   <div class="caption">
+    <h3 data-i18n="place3Title">وادي فرتينا – Fırtına Vadisi</h3>
+    <p data-i18n="place3Text">أنهار وجسور تاريخية ومسارات طبيعية.</p>
+   </div>
+  </article>
+
+ </div>
+</section>
+
+<section id="services">
+ <h2 class="section-title" data-i18n="servicesTitle">خدماتنا</h2>
+ <p class="sub" data-i18n="servicesIntro">
+  خدمات متكاملة للأفراد والعائلات ورجال الأعمال، مع الدقة والسرية والالتزام بالمواعيد.
+ </p>
+
+ <div class="grid">
+
+  <article class="card">
+   <div class="icon">✦</div>
+   <h3 data-i18n="svc1Title">الترجمة المحلفة عربي–تركي</h3>
+   <p data-i18n="svc1Text">
+    ترجمة الوثائق والشهادات والعقود والمستندات من العربية إلى التركية وبالعكس.
+   </p>
+  </article>
+
+  <article class="card">
+   <div class="icon">⚖</div>
+   <h3 data-i18n="svc2Title">المحاكم والجهات الرسمية</h3>
+   <p data-i18n="svc2Text">
+    خدمات الترجمة والمرافقة اللغوية لدى المحاكم والشرطة والدوائر الحكومية والنوتر.
+   </p>
+  </article>
+
+  <article class="card">
+   <div class="icon">⌂</div>
+   <h3 data-i18n="svc3Title">الطابو والعقارات</h3>
+   <p data-i18n="svc3Text">
+    دعم لغوي ومتابعة معاملات شراء وبيع العقارات ونقل الملكية لدى دوائر الطابو.
+   </p>
+  </article>
+
+  <article class="card">
+   <div class="icon">▣</div>
+   <h3 data-i18n="svc4Title">ملفات الإقامة</h3>
+   <p data-i18n="svc4Text">
+    المساعدة في تجهيز وتنظيم ملفات الإقامة السياحية والعقارية والعائلية والطلابية.
+   </p>
+  </article>
+
+  <article class="card">
+   <div class="icon">⌖</div>
+   <h3 data-i18n="svc5Title">السياحة والمرافقة في ريزا وطرابزون</h3>
+   <p data-i18n="svc5Text">
+    مساعدة الزوار العرب والتواصل والترجمة والمرافقة اللغوية وتنسيق الخدمات السياحية.
+   </p>
+  </article>
+
+  <article class="card">
+   <div class="icon">◇</div>
+   <h3 data-i18n="svc6Title">الاستشارات والخدمات العقارية</h3>
+   <p data-i18n="svc6Text">
+    المساعدة الأولية في البحث عن الشقق ومقارنة الخيارات والتواصل بشأن البيع والشراء.
+   </p>
+  </article>
+
+ </div>
+</section>
+
+<section id="local-search">
+ <h2 class="section-title" data-i18n="localTitle">
+  مترجم عربي في ريزا – خدمات ترجمة عربي تركي
+ </h2>
+ <p class="sub" data-i18n="localText">
+  إذا كنت تبحث عن مترجم عربي في ريزا أو مترجم محلف عربي–تركي،
+  يقدم كيريم دولّي خدمات الترجمة والمرافقة اللغوية للأفراد والعائلات والزوار العرب في ريزا وطرابزون.
+ </p>
+
+ <div class="grid">
+  <article class="card">
+   <h3 data-i18n="local1Title">ترجمة نوتر عربي في ريزا</h3>
+   <p data-i18n="local1Text">
+    ترجمة الوثائق العربية والتركية وتجهيزها لتقديمها لدى النوتر والجهات الرسمية.
+   </p>
+  </article>
+
+  <article class="card">
+   <h3 data-i18n="local2Title">مترجم للمحكمة والشرطة</h3>
+   <p data-i18n="local2Text">
+    خدمات الترجمة والمرافقة اللغوية عند الحاجة في الإجراءات والمراجعات الرسمية.
+   </p>
+  </article>
+
+  <article class="card">
+   <h3 data-i18n="local3Title">مترجم طابو وعقارات</h3>
+   <p data-i18n="local3Text">
+    دعم لغوي للمتعاملين العرب في معاملات شراء وبيع العقارات والطابو ونقل الملكية في ريزا.
+   </p>
+  </article>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <div class="about-inner">
+  <h2 class="section-title" data-i18n="whyTitle">لماذا تختار خدماتنا؟</h2>
+  <p class="sub" data-i18n="whyIntro">
+   خبرة عملية في الترجمة والمعاملات الرسمية في ريزا، واهتمام بالتفاصيل من أول تواصل حتى إتمام الخدمة.
+  </p>
+
+  <div class="grid">
+   <article class="card">
+    <h3 data-i18n="why1Title">خبرة واحترافية</h3>
+    <p data-i18n="why1Text">أكثر من خمس سنوات من الخبرة في الترجمة المحلفة والخدمات اللغوية.</p>
+   </article>
+
+   <article class="card">
+    <h3 data-i18n="why2Title">الدقة والموثوقية</h3>
+    <p data-i18n="why2Text">عناية بالأسماء والبيانات والمصطلحات ومراجعة المستندات بعناية.</p>
+   </article>
+
+   <article class="card">
+    <h3 data-i18n="why3Title">سرية تامة</h3>
+    <p data-i18n="why3Text">التعامل مع الوثائق والمعلومات بمهنية واحترام كامل للخصوصية.</p>
+   </article>
+
+   <article class="card">
+    <h3 data-i18n="why4Title">سرعة والتزام بالمواعيد</h3>
+    <p data-i18n="why4Text">تنظيم العمل وتسليم المعاملات في الوقت المتفق عليه قدر الإمكان.</p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="faq">
+ <h2 class="section-title" data-i18n="faqTitle">الأسئلة الشائعة</h2>
+ <div class="grid">
+  <article class="card">
+   <h3 data-i18n="faq1Q">هل يوجد مترجم عربي في ريزا؟</h3>
+   <p data-i18n="faq1A">نعم، يمكن التواصل لطلب خدمات الترجمة العربية–التركية في ريزا.</p>
+  </article>
+
+  <article class="card">
+   <h3 data-i18n="faq2Q">هل تتم ترجمة الوثائق للنوتر والطابو؟</h3>
+   <p data-i18n="faq2A">تتوفر خدمات الترجمة والمساعدة اللغوية بحسب نوع المستند ومتطلبات الجهة.</p>
+  </article>
+
+  <article class="card">
+   <h3 data-i18n="faq3Q">هل تقدمون خدمات في طرابزون؟</h3>
+   <p data-i18n="faq3A">يمكن الاستفسار عن خدمات الترجمة والمرافقة اللغوية في طرابزون والمناطق القريبة.</p>
+  </article>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="contact-box">
+  <h2 class="section-title" data-i18n="contactTitle">تواصل معنا</h2>
+  <p class="sub" data-i18n="contactIntro">
+   للاستفسار أو طلب خدمة، تواصل معنا مباشرة. يسعدنا مساعدتك.
+  </p>
+
+  <div class="contact-list">
+   <a href="https://wa.me/905312661988">WhatsApp: +90 531 266 19 88</a>
+   <a href="mailto:Karem.dh128@gmail.com">Karem.dh128@gmail.com</a>
+   <span>Rize – Merkez, Türkiye</span>
+  </div>
+
+  <a class="btn" href="https://wa.me/905312661988" data-i18n="sendMessage">
+   إرسال رسالة واتساب
+  </a>
+
+  <div class="social">
+   <a href="https://www.instagram.com/kerimdulli/" target="_blank" rel="noopener">Instagram: @kerimdulli</a>
+   &nbsp; · &nbsp;
+   <a href="https://www.facebook.com/Kerimdulli" target="_blank" rel="noopener">Facebook: Kerimdulli</a>
+  </div>
+ </div>
+</section>
+
+</main>
+
+<footer>
+ KERİM DULLİ © <span id="year"></span> –
+ <span data-i18n="rights">جميع الحقوق محفوظة</span>
+</footer>
+
+<script>
+const translations = {
+
+ar:{
+brandSubtitle:"مترجم محلف للغة العربية",
+navServices:"الخدمات",
+navPlaces:"اكتشف المنطقة",
+navAbout:"من نحن",
+navContact:"تواصل",
+kicker:"خدمات الترجمة والمعاملات في ريزا – تركيا",
+heroTitle:"المترجم المحلف كيريم دولّي",
+heroText:"ترجمة عربية–تركية دقيقة وموثوقة، ومتابعة معاملاتكم الرسمية، وخدمات الإقامة والعقارات والسياحة في ريزا وطرابزون.",
+whatsappCta:"تواصل عبر واتساب",
+servicesCta:"اكتشف خدماتنا",
+placesTitle:"اكتشف جمال ريزا والبحر الأسود",
+placesIntro:"من مزارع الشاي الخضراء إلى المرتفعات والأنهار؛ تعرّف على أبرز الوجهات السياحية في المنطقة.",
+place1Title:"مدينة ريزا ومزارع الشاي",
+place1Text:"إطلالات خضراء على سفوح البحر الأسود.",
+place2Title:"مرتفعات آيدر – Ayder",
+place2Text:"طبيعة جبلية وهواء منعش وأكواخ ريفية.",
+place3Title:"وادي فرتينا – Fırtına Vadisi",
+place3Text:"أنهار وجسور تاريخية ومسارات طبيعية.",
+servicesTitle:"خدماتنا",
+servicesIntro:"خدمات متكاملة للأفراد والعائلات ورجال الأعمال، مع الدقة والسرية والالتزام بالمواعيد.",
+svc1Title:"الترجمة المحلفة عربي–تركي",
+svc1Text:"ترجمة الوثائق والشهادات والعقود والمستندات من العربية إلى التركية وبالعكس، مع متابعة التصديق عند الحاجة.",
+svc2Title:"المحاكم والجهات الرسمية",
+svc2Text:"خدمات الترجمة والمرافقة اللغوية لدى المحاكم والشرطة والدوائر الحكومية والنوتر والمؤسسات الرسمية.",
+svc3Title:"الطابو والعقارات",
+svc3Text:"دعم لغوي ومتابعة معاملات شراء وبيع العقارات ونقل الملكية والتعديلات لدى دوائر الطابو.",
+svc4Title:"ملفات الإقامة",
+svc4Text:"المساعدة في تجهيز وتنظيم ملفات الإقامة السياحية والعقارية والعائلية والطلابية ومراجعة الوثائق المطلوبة.",
+svc5Title:"السياحة والمرافقة في ريزا وطرابزون",
+svc5Text:"مساعدة الزوار العرب، والتواصل والترجمة والمرافقة اللغوية، وتنسيق الخدمات السياحية في ريزا وطرابزون والمناطق المحيطة.",
+svc6Title:"الاستشارات والخدمات العقارية",
+svc6Text:"مساعدة أولية في البحث عن الشقق ومقارنة الخيارات والتواصل بشأن البيع والشراء والخدمات العقارية والسياحية.",
+localTitle:"مترجم عربي في ريزا – خدمات ترجمة عربي تركي",
+localText:"إذا كنت تبحث عن مترجم عربي في ريزا أو مترجم محلف عربي–تركي، يقدم كيريم دولّي خدمات الترجمة والمرافقة اللغوية للأفراد والعائلات والزوار العرب في ريزا وطرابزون.",
+local1Title:"ترجمة نوتر عربي في ريزا",
+local1Text:"مساعدة في ترجمة الوثائق العربية والتركية وتجهيزها لتقديمها لدى النوتر والجهات الرسمية، وفق متطلبات المعاملة.",
+local2Title:"مترجم للمحكمة والشرطة",
+local2Text:"خدمات الترجمة والمرافقة اللغوية عند الحاجة في الإجراءات والمراجعات الرسمية، مع الالتزام بحدود التكليف والصفة المهنية.",
+local3Title:"مترجم طابو وعقارات",
+local3Text:"دعم لغوي للمتعاملين العرب في معاملات شراء وبيع العقارات والطابو ونقل الملكية في ريزا.",
+whyTitle:"لماذا تختار خدماتنا؟",
+whyIntro:"خبرة عملية في الترجمة والمعاملات الرسمية في ريزا، واهتمام بالتفاصيل من أول تواصل حتى إتمام الخدمة.",
+why1Title:"خبرة واحترافية",
+why1Text:"أكثر من خمس سنوات من الخبرة في الترجمة المحلفة والخدمات اللغوية.",
+why2Title:"الدقة والموثوقية",
+why2Text:"عناية بالأسماء والبيانات والمصطلحات ومراجعة المستندات بعناية.",
+why3Title:"سرية تامة",
+why3Text:"التعامل مع الوثائق والمعلومات بمهنية واحترام كامل للخصوصية.",
+why4Title:"سرعة والتزام بالمواعيد",
+why4Text:"تنظيم العمل وتسليم المعاملات في الوقت المتفق عليه قدر الإمكان.",
+faqTitle:"الأسئلة الشائعة",
+faq1Q:"هل يوجد مترجم عربي في ريزا؟",
+faq1A:"نعم، يمكن التواصل مع كيريم دولّي لطلب خدمات الترجمة العربية–التركية والمساعدة اللغوية في ريزا.",
+faq2Q:"هل تتم ترجمة الوثائق للنوتر والطابو؟",
+faq2A:"تتوفر خدمات الترجمة والمساعدة اللغوية للوثائق والمعاملات ذات الصلة، ويحدد الإجراء بحسب نوع المستند ومتطلبات الجهة.",
+faq3Q:"هل تقدمون خدمات في طرابزون؟",
+faq3A:"يمكن الاستفسار عن خدمات الترجمة والمرافقة اللغوية في طرابزون والمناطق القريبة بحسب الموعد ونوع الخدمة.",
+contactTitle:"تواصل معنا",
+contactIntro:"للاستفسار أو طلب خدمة، تواصل معنا مباشرة. يسعدنا مساعدتك.",
+sendMessage:"إرسال رسالة واتساب",
+rights:"جميع الحقوق محفوظة",
+pageTitle:"KERİM DULLİ | المترجم المحلف – ريزا، تركيا",
+description:"KERİM DULLİ – خدمات الترجمة المحلفة عربي–تركي، المعاملات الرسمية، ملفات الإقامة، العقارات والسياحة في ريزا وطرابزون.",
+keywords:"مترجم عربي في ريزا, مترجم محلف في ريزا, ترجمة عربي تركي ريزا, مترجم نوتر عربي ريزا, مترجم طابو ريزا, مترجم محكمة عربي ريزا, خدمات الإقامة في تركيا, سياحة ريزا, مترجم عربي طرابزون",
+place1Alt:"بانوراما مدينة ريزا ومزارع الشاي",
+place2Alt:"مرتفعات آيدر في ريزا",
+place3Alt:"وادي ونهر فرتينا في ريزا"
+},
+
+tr:{
+brandSubtitle:"ARAPÇA YEMİNLİ TERCÜMAN",
+navServices:"Hizmetler",
+navPlaces:"Bölgeyi Keşfedin",
+navAbout:"Hakkımızda",
+navContact:"İletişim",
+kicker:"Rize – Türkiye’de tercüme ve resmî işlem hizmetleri",
+heroTitle:"Yeminli Tercüman Kerim Dulli",
+heroText:"Güvenilir Arapça–Türkçe tercüme, resmî işlem desteği, ikamet dosyaları, gayrimenkul ve Rize–Trabzon turizm hizmetleri.",
+whatsappCta:"WhatsApp ile İletişim",
+servicesCta:"Hizmetlerimizi Keşfedin",
+placesTitle:"Rize ve Karadeniz’in Güzelliklerini Keşfedin",
+placesIntro:"Yeşil çay bahçelerinden yaylalara ve nehirlere kadar bölgenin öne çıkan turistik yerlerini keşfedin.",
+place1Title:"Rize Şehri ve Çay Bahçeleri",
+place1Text:"Karadeniz yamaçlarında yemyeşil manzaralar.",
+place2Title:"Ayder Yaylası",
+place2Text:"Dağ manzaraları, temiz hava ve ahşap yayla evleri.",
+place3Title:"Fırtına Vadisi",
+place3Text:"Nehirler, tarihi köprüler ve doğal yürüyüş rotaları.",
+servicesTitle:"Hizmetlerimiz",
+servicesIntro:"Bireyler, aileler ve iş insanları için doğruluk, gizlilik ve zamanında hizmet anlayışıyla kapsamlı destek.",
+svc1Title:"Arapça–Türkçe Yeminli Tercüme",
+svc1Text:"Belgelerin, diplomaların, sözleşmelerin ve resmî evrakların Arapçadan Türkçeye ve Türkçeden Arapçaya tercümesi.",
+svc2Title:"Mahkemeler ve Resmî Kurumlar",
+svc2Text:"Mahkemelerde, emniyette, noterlerde, kamu kurumlarında ve diğer resmî işlemlerde tercüme ve dil desteği.",
+svc3Title:"Tapu ve Gayrimenkul İşlemleri",
+svc3Text:"Gayrimenkul alım satımı, tapu devri ve tapu müdürlüklerindeki işlemlerde dil desteği.",
+svc4Title:"İkamet Dosyaları",
+svc4Text:"Turistik, taşınmaz, aile ve öğrenci ikamet dosyalarının hazırlanması ve gerekli belgelerin kontrolüne destek.",
+svc5Title:"Rize ve Trabzon’da Turizm Desteği",
+svc5Text:"Arap ziyaretçilere iletişim, tercüme ve dil refakati desteği; Rize, Trabzon ve çevresinde turizm hizmetleri.",
+svc6Title:"Gayrimenkul Danışmanlığı ve Hizmetleri",
+svc6Text:"Daire arama, seçenekleri karşılaştırma, alım satım iletişimi ve gayrimenkul hizmetlerinde başlangıç desteği.",
+localTitle:"Rize Arapça Tercüman – Arapça Türkçe Tercüme Hizmetleri",
+localText:"Rize’de Arapça tercüman veya Arapça–Türkçe yeminli tercüme hizmeti arıyorsanız Kerim Dulli, bireylere, ailelere ve Arapça konuşan ziyaretçilere Rize ve Trabzon’da tercüme ve dil desteği sunar.",
+local1Title:"Rize Arapça Noter Tercümanı",
+local1Text:"Noter ve resmî kurumlara sunulacak Arapça ve Türkçe belgelerin tercümesi ve işlem türüne göre hazırlanması konusunda destek.",
+local2Title:"Mahkeme ve Emniyet Tercümanı",
+local2Text:"Resmî süreç ve başvurularda ihtiyaç hâlinde tercüme ve dil refakati; görevlendirme ve mesleki yetki sınırlarına uygun hizmet.",
+local3Title:"Tapu ve Gayrimenkul Tercümanı",
+local3Text:"Rize’de gayrimenkul alım satımı, tapu işlemleri ve mülkiyet devri sırasında Arapça konuşan müşterilere dil desteği.",
+whyTitle:"Neden Bizi Tercih Etmelisiniz?",
+whyIntro:"Rize’de tercüme ve resmî işlemlerde pratik deneyim; ilk iletişimden hizmetin tamamlanmasına kadar ayrıntılara özen.",
+why1Title:"Deneyim ve Profesyonellik",
+why1Text:"Yeminli tercüme ve dil hizmetlerinde beş yılı aşkın deneyim.",
+why2Title:"Doğruluk ve Güvenilirlik",
+why2Text:"İsimlerin, bilgilerin ve terimlerin doğruluğuna dikkat; belgelerin özenle kontrolü.",
+why3Title:"Tam Gizlilik",
+why3Text:"Belge ve bilgilerin profesyonelce ve gizliliğe saygı gösterilerek ele alınması.",
+why4Title:"Hızlı ve Zamanında Hizmet",
+why4Text:"İşlerin planlanması ve mümkün olduğunca kararlaştırılan zamanda teslim edilmesi.",
+faqTitle:"Sıkça Sorulan Sorular",
+faq1Q:"Rize’de Arapça tercüman var mı?",
+faq1A:"Evet. Rize’de Arapça–Türkçe tercüme ve dil desteği için Kerim Dulli ile iletişime geçebilirsiniz.",
+faq2Q:"Noter ve tapu belgeleri tercüme ediliyor mu?",
+faq2A:"İlgili belgelerde tercüme ve dil desteği sunulabilir. İşlem, belgenin türüne ve kurumun şartlarına göre belirlenir.",
+faq3Q:"Trabzon’da da hizmet veriyor musunuz?",
+faq3A:"Randevuya ve hizmet türüne bağlı olarak Trabzon ve yakın bölgelerde hizmet hakkında bilgi alabilirsiniz.",
+contactTitle:"İletişim",
+contactIntro:"Bilgi almak veya hizmet talep etmek için doğrudan bizimle iletişime geçin.",
+sendMessage:"WhatsApp Mesajı Gönder",
+rights:"Tüm hakları saklıdır",
+pageTitle:"KERİM DULLİ | Yeminli Tercüman – Rize, Türkiye",
+description:"KERİM DULLİ – Arapça–Türkçe yeminli tercüme, resmî işlemler, ikamet dosyaları, gayrimenkul ve turizm hizmetleri.",
+keywords:"Rize Arapça tercüman, Rize Arapça yeminli tercüman, Rize noter tercümanı, Rize tapu tercümanı, Rize mahkeme tercümanı, Arapça Türkçe tercüme, Rize ikamet dosyası, Rize turizm, Trabzon Arapça tercüman",
+place1Alt:"Rize şehri ve çay bahçeleri",
+place2Alt:"Rize Ayder Yaylası",
+place3Alt:"Rize Fırtına Vadisi ve nehri"
+},
+
+en:{
+brandSubtitle:"ARABIC SWORN TRANSLATOR",
+navServices:"Services",
+navPlaces:"Explore the Region",
+navAbout:"About Us",
+navContact:"Contact",
+kicker:"Translation and official assistance in Rize, Türkiye",
+heroTitle:"Sworn Translator Kerim Dulli",
+heroText:"Reliable Arabic–Turkish translation, official procedure support, residence applications, real estate and tourism services in Rize and Trabzon.",
+whatsappCta:"Contact on WhatsApp",
+servicesCta:"Explore Our Services",
+placesTitle:"Discover the Beauty of Rize and the Black Sea",
+placesIntro:"From green tea gardens to mountain plateaus and rivers, discover the region’s most popular destinations.",
+place1Title:"Rize City and Tea Gardens",
+place1Text:"Lush green views across the Black Sea hills.",
+place2Title:"Ayder Plateau",
+place2Text:"Mountain scenery, fresh air and traditional wooden houses.",
+place3Title:"Fırtına Valley",
+place3Text:"Rivers, historic bridges and natural trails.",
+servicesTitle:"Our Services",
+servicesIntro:"Comprehensive support for individuals, families and business clients, with accuracy, confidentiality and timely service.",
+svc1Title:"Arabic–Turkish Sworn Translation",
+svc1Text:"Translation of documents, certificates, contracts and official papers from Arabic to Turkish and Turkish to Arabic.",
+svc2Title:"Courts and Official Institutions",
+svc2Text:"Translation and language assistance for courts, police departments, notaries and government offices.",
+svc3Title:"Title Deed and Real Estate",
+svc3Text:"Language assistance for property purchases and sales, title transfers and land registry procedures.",
+svc4Title:"Residence Application Files",
+svc4Text:"Assistance preparing tourist, property-based, family and student residence files and checking required documents.",
+svc5Title:"Tourism Support in Rize and Trabzon",
+svc5Text:"Communication, translation and language accompaniment for Arabic-speaking visitors in Rize, Trabzon and nearby areas.",
+svc6Title:"Real Estate Services",
+svc6Text:"Initial assistance with apartment searches, comparing options and purchase or sale communication.",
+localTitle:"Arabic Translator in Rize – Arabic Turkish Translation",
+localText:"If you are looking for an Arabic translator in Rize or Arabic–Turkish sworn translation, Kerim Dulli provides translation and language assistance for individuals, families and Arabic-speaking visitors in Rize and Trabzon.",
+local1Title:"Arabic Notary Translation in Rize",
+local1Text:"Assistance translating Arabic and Turkish documents for submission to notaries and official institutions, according to each procedure.",
+local2Title:"Court and Police Translation",
+local2Text:"Translation and language accompaniment for official procedures when required, within the scope of the relevant assignment.",
+local3Title:"Title Deed and Property Translator",
+local3Text:"Language support for Arabic-speaking clients during property purchases, sales, title deed and ownership transfer procedures in Rize.",
+whyTitle:"Why Choose Us?",
+whyIntro:"Practical experience in translation and official procedures in Rize, with attention to detail from first contact to service completion.",
+why1Title:"Experience and Professionalism",
+why1Text:"More than five years of experience in sworn translation and language services.",
+why2Title:"Accuracy and Reliability",
+why2Text:"Careful attention to names, personal details and terminology, with thorough document checks.",
+why3Title:"Full Confidentiality",
+why3Text:"Professional handling of documents and information with respect for privacy.",
+why4Title:"Fast and Timely Service",
+why4Text:"Organized work and delivery within the agreed timeframe whenever possible.",
+faqTitle:"Frequently Asked Questions",
+faq1Q:"Can I find an Arabic translator in Rize?",
+faq1A:"Yes. Contact Kerim Dulli for Arabic–Turkish translation and language assistance in Rize.",
+faq2Q:"Do you translate documents for notary and title deed procedures?",
+faq2A:"Translation and language assistance are available for relevant documents. The process depends on the document and the institution’s requirements.",
+faq3Q:"Are services available in Trabzon?",
+faq3A:"You can enquire about translation and language accompaniment in Trabzon and nearby areas, depending on the date and service required.",
+contactTitle:"Contact Us",
+contactIntro:"For enquiries or service requests, contact us directly. We will be pleased to assist you.",
+sendMessage:"Send a WhatsApp Message",
+rights:"All rights reserved",
+pageTitle:"KERİM DULLİ | Sworn Translator – Rize, Türkiye",
+description:"KERİM DULLİ – Arabic–Turkish sworn translation, official procedures, residence files, real estate and tourism services in Rize and Trabzon.",
+keywords:"Arabic translator in Rize, Arabic sworn translator Rize, Rize notary translator, Rize title deed translator, Arabic court interpreter Rize, Arabic Turkish translation, Rize residence application, Rize tourism, Arabic translator Trabzon",
+place1Alt:"Panoramic view of Rize city and tea gardens",
+place2Alt:"Ayder Plateau in Rize",
+place3Alt:"Fırtına Valley and river in Rize"
+}
+
+};
+
+function setLang(lang){
+ const dict=translations[lang];
+ if(!dict)return;
+
+ document.documentElement.lang=lang;
+ document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+
+ document.querySelectorAll("[data-i18n]").forEach(el=>{
+  const key=el.getAttribute("data-i18n");
+  if(dict[key]!==undefined)el.textContent=dict[key];
+ });
+
+ document.querySelectorAll("[data-i18n-alt]").forEach(el=>{
+  const key=el.getAttribute("data-i18n-alt");
+  if(dict[key]!==undefined)el.alt=dict[key];
+ });
+
+ document.querySelectorAll("[data-lang]").forEach(btn=>{
+  const active=btn.getAttribute("data-lang")===lang;
+  btn.classList.toggle("active",active);
+  btn.setAttribute("aria-pressed",active?"true":"false");
+ });
+
+ document.title=dict.pageTitle;
+
+ const desc=document.querySelector('meta[name="description"]');
+ if(desc)desc.setAttribute("content",dict.description);
+
+ const keywords=document.querySelector('meta[name="keywords"]');
+ if(keywords)keywords.setAttribute("content",dict.keywords);
+
+ const ogTitle=document.querySelector('meta[property="og:title"]');
+ if(ogTitle)ogTitle.setAttribute("content",dict.pageTitle);
+
+ const ogDesc=document.querySelector('meta[property="og:description"]');
+ if(ogDesc)ogDesc.setAttribute("content",dict.description);
+
+ try{localStorage.setItem("kerimDulliLanguage",lang)}catch(e){}
+}
+
+document.querySelectorAll("[data-lang]").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+  setLang(btn.getAttribute("data-lang"));
+ });
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+let saved="ar";
+try{
+ saved=localStorage.getItem("kerimDulliLanguage")||"ar";
+}catch(e){}
+
+setLang(saved);
+</script>
+
+</body>
+ressRegion":"Rize",
    "addressCountry":"TR"
  },
  "areaServed":[
